@@ -4,6 +4,7 @@ window.addEventListener("load", function () {
   elemekElerese3();
   elemekElerese4();
   elemekFormazasa1();
+  esemenykezeles1();
 });
 
 function elemekElerese1() {
@@ -33,6 +34,20 @@ function elemekElerese4() {
 }
 
 function elemekFormazasa1() {
-  const LISTA2 = $(".lista");
-  LISTA2.eq(0).addClass("formazott");
+  const LISTA = $(".lista");
+  LISTA.eq(0).addClass("formazott");
+}
+
+function esemenykezeles1() {
+  const LISTA = $(".lista");
+  const KATTINTESUTAN = $(".kattintasutan");
+  LISTA.on("click", function () {
+    KATTINTESUTAN.eq(0).html(LISTA.html())
+    LISTA.empty();
+
+  });
+}
+
+function esemenykezeles2(){
+  const ELSOFELADAT = $("#f1")
 }
