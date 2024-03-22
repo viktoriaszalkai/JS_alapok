@@ -7,20 +7,20 @@ window.addEventListener("load", function () {
 });
 
 function elemekElerese1() {
-  const ELEM = document.querySelectorAll("section h2")[0];
-  console.log(ELEM.innerHTML);
+  const ELEM = $("section h2")[0];
+  console.log(ELEM);
 }
 function elemekElerese2() {
-  const ELEM = document.querySelectorAll("#ide")[0];
-  ELEM.innerHTML = "<p>Jó reggelt!</p>";
+  const ELEM = $("#ide");
+  ELEM.eq(0).append("Jó reggelt!");
 }
 function elemekElerese3() {
-  const ELEM = document.querySelectorAll(".ide")[0];
-  ELEM.innerHTML = "<p>Jó reggelt!</p>";
+  const ELEM = $(".ide");
+  ELEM.eq(0).append("<p>Jó reggelt!</p>");
 }
 
 function elemekElerese4() {
-  const LISTA = document.querySelectorAll(".lista");
+  const LISTA = $(".lista");
 
   let txt = "<ul>";
   for (let i = 0; i < 5; i++) {
@@ -28,12 +28,11 @@ function elemekElerese4() {
   }
   txt += "</ul>";
   console.log(txt);
-  LISTA[0].innerHTML = txt
-  return LISTA
+  LISTA.eq(0).html(txt);
+  return LISTA;
 }
 
-function elemekFormazasa1(){
-    const LISTA2 = document.querySelectorAll(".lista"); 
-    LISTA2[0].classList.add("formazott")   
+function elemekFormazasa1() {
+  const LISTA2 = $(".lista");
+  LISTA2.eq(0).addClass("formazott");
 }
-
